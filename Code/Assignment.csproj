@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{84C437F3-2921-49FD-9EDF-33BD629CE6BA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Assignment</RootNamespace>
+    <AssemblyName>Assignment</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Object Classes\Exists_In.cs" />
+    <Compile Include="Object Classes\Item.cs" />
+    <Compile Include="Object Classes\Position.cs" />
+    <Compile Include="Object Classes\Transaction.cs" />
+    <Compile Include="Object Classes\Works_In.cs" />
+    <Compile Include="ViewModelClasses\Best_Seller.cs" />
+    <Compile Include="ViewModelClasses\CityBOD.cs" />
+    <Compile Include="ViewModelClasses\CustomersCities.cs" />
+    <Compile Include="ViewModelClasses\ItemPhoto.cs" />
+    <Compile Include="ViewModelClasses\ItemStoreInStock.cs" />
+    <Compile Include="ViewModelClasses\ItemStoreSold.cs" />
+    <Compile Include="ViewModelClasses\Item_Include.cs" />
+    <Compile Include="ViewModelClasses\Most_Popular.cs" />
+    <Compile Include="ViewModelClasses\PersonPhoneAddress.cs" />
+    <Compile Include="ViewModelClasses\StoreDistance.cs" />
+    <Compile Include="ViewModelClasses\TransactionPerson.cs" />
+    <Compile Include="ViewModelClasses\TransactionsCities.cs" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataLayer.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Object Classes\Address.cs" />
+    <Compile Include="Object Classes\Person.cs" />
+    <Compile Include="Object Classes\Phone.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\Add.png" />
+    <Resource Include="Assets\Icons\Customers.png" />
+    <Resource Include="Assets\Icons\Edit.png" />
+    <Resource Include="Assets\Icons\Employees.png" />
+    <Resource Include="Assets\Icons\Items.png" />
+    <Resource Include="Assets\Icons\Map.png" />
+    <Resource Include="Assets\Icons\Remove.png" />
+    <Resource Include="Assets\Icons\Stores.png" />
+    <Resource Include="Assets\Icons\Transactions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Products\1.png" />
+    <Resource Include="Assets\Products\10.png" />
+    <Resource Include="Assets\Products\2.png" />
+    <Resource Include="Assets\Products\3.png" />
+    <Resource Include="Assets\Products\4.png" />
+    <Resource Include="Assets\Products\5.png" />
+    <Resource Include="Assets\Products\6.png" />
+    <Resource Include="Assets\Products\7.png" />
+    <Resource Include="Assets\Products\8.png" />
+    <Resource Include="Assets\Products\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Background\Black Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Avatars\0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Avatars\1.png" />
+    <Resource Include="Assets\Avatars\10.png" />
+    <Resource Include="Assets\Avatars\11.png" />
+    <Resource Include="Assets\Avatars\12.png" />
+    <Resource Include="Assets\Avatars\13.png" />
+    <Resource Include="Assets\Avatars\14.png" />
+    <Resource Include="Assets\Avatars\15.png" />
+    <Resource Include="Assets\Avatars\16.png" />
+    <Resource Include="Assets\Avatars\17.png" />
+    <Resource Include="Assets\Avatars\18.png" />
+    <Resource Include="Assets\Avatars\19.png" />
+    <Resource Include="Assets\Avatars\2.png" />
+    <Resource Include="Assets\Avatars\20.png" />
+    <Resource Include="Assets\Avatars\21.png" />
+    <Resource Include="Assets\Avatars\22.png" />
+    <Resource Include="Assets\Avatars\23.png" />
+    <Resource Include="Assets\Avatars\24.png" />
+    <Resource Include="Assets\Avatars\25.png" />
+    <Resource Include="Assets\Avatars\26.png" />
+    <Resource Include="Assets\Avatars\27.png" />
+    <Resource Include="Assets\Avatars\28.png" />
+    <Resource Include="Assets\Avatars\29.png" />
+    <Resource Include="Assets\Avatars\3.png" />
+    <Resource Include="Assets\Avatars\30.png" />
+    <Resource Include="Assets\Avatars\31.png" />
+    <Resource Include="Assets\Avatars\32.png" />
+    <Resource Include="Assets\Avatars\33.png" />
+    <Resource Include="Assets\Avatars\34.png" />
+    <Resource Include="Assets\Avatars\35.png" />
+    <Resource Include="Assets\Avatars\36.png" />
+    <Resource Include="Assets\Avatars\37.png" />
+    <Resource Include="Assets\Avatars\38.png" />
+    <Resource Include="Assets\Avatars\39.png" />
+    <Resource Include="Assets\Avatars\4.png" />
+    <Resource Include="Assets\Avatars\40.png" />
+    <Resource Include="Assets\Avatars\41.png" />
+    <Resource Include="Assets\Avatars\42.png" />
+    <Resource Include="Assets\Avatars\5.png" />
+    <Resource Include="Assets\Avatars\6.png" />
+    <Resource Include="Assets\Avatars\7.png" />
+    <Resource Include="Assets\Avatars\8.png" />
+    <Resource Include="Assets\Avatars\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\SmallMap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Stores\0.png" />
+    <Resource Include="Assets\Stores\1.png" />
+    <Resource Include="Assets\Stores\10.png" />
+    <Resource Include="Assets\Stores\11.png" />
+    <Resource Include="Assets\Stores\12.png" />
+    <Resource Include="Assets\Stores\13.png" />
+    <Resource Include="Assets\Stores\14.png" />
+    <Resource Include="Assets\Stores\15.png" />
+    <Resource Include="Assets\Stores\2.png" />
+    <Resource Include="Assets\Stores\3.png" />
+    <Resource Include="Assets\Stores\4.png" />
+    <Resource Include="Assets\Stores\5.png" />
+    <Resource Include="Assets\Stores\6.png" />
+    <Resource Include="Assets\Stores\7.png" />
+    <Resource Include="Assets\Stores\8.png" />
+    <Resource Include="Assets\Stores\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Items\0.png" />
+    <Resource Include="Assets\Items\1.png" />
+    <Resource Include="Assets\Items\10.png" />
+    <Resource Include="Assets\Items\11.png" />
+    <Resource Include="Assets\Items\12.png" />
+    <Resource Include="Assets\Items\13.png" />
+    <Resource Include="Assets\Items\14.png" />
+    <Resource Include="Assets\Items\15.png" />
+    <Resource Include="Assets\Items\16.png" />
+    <Resource Include="Assets\Items\17.png" />
+    <Resource Include="Assets\Items\18.png" />
+    <Resource Include="Assets\Items\19.png" />
+    <Resource Include="Assets\Items\2.png" />
+    <Resource Include="Assets\Items\20.png" />
+    <Resource Include="Assets\Items\21.png" />
+    <Resource Include="Assets\Items\22.png" />
+    <Resource Include="Assets\Items\23.png" />
+    <Resource Include="Assets\Items\24.png" />
+    <Resource Include="Assets\Items\25.png" />
+    <Resource Include="Assets\Items\26.png" />
+    <Resource Include="Assets\Items\27.png" />
+    <Resource Include="Assets\Items\28.png" />
+    <Resource Include="Assets\Items\29.png" />
+    <Resource Include="Assets\Items\3.png" />
+    <Resource Include="Assets\Items\30.png" />
+    <Resource Include="Assets\Items\31.png" />
+    <Resource Include="Assets\Items\32.png" />
+    <Resource Include="Assets\Items\33.png" />
+    <Resource Include="Assets\Items\34.png" />
+    <Resource Include="Assets\Items\35.png" />
+    <Resource Include="Assets\Items\36.png" />
+    <Resource Include="Assets\Items\37.png" />
+    <Resource Include="Assets\Items\38.png" />
+    <Resource Include="Assets\Items\39.png" />
+    <Resource Include="Assets\Items\4.png" />
+    <Resource Include="Assets\Items\40.png" />
+    <Resource Include="Assets\Items\41.png" />
+    <Resource Include="Assets\Items\42.png" />
+    <Resource Include="Assets\Items\43.png" />
+    <Resource Include="Assets\Items\44.png" />
+    <Resource Include="Assets\Items\45.png" />
+    <Resource Include="Assets\Items\46.png" />
+    <Resource Include="Assets\Items\47.png" />
+    <Resource Include="Assets\Items\48.png" />
+    <Resource Include="Assets\Items\5.png" />
+    <Resource Include="Assets\Items\6.png" />
+    <Resource Include="Assets\Items\7.png" />
+    <Resource Include="Assets\Items\8.png" />
+    <Resource Include="Assets\Items\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Other\No Picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Other\No Avatar.png" />
+    <Resource Include="Assets\Other\No Location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\Big Map.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
